@@ -27,7 +27,7 @@ public class Person implements Comparable<Person>{
     @Override
     public String toString() {
         return firstName + " " + lastName + ". Адрес: " + address.getCity() + ", улица " +
-                address.getStreet() + " " + address.getHouseNumber();
+                address.getStreet() + " " + address.getHouseNumber() + "\n";
     }
 
     public int compareTo(Person p) {
