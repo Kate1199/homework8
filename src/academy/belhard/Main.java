@@ -27,11 +27,12 @@ public class Main {
         people.add(p5);
         people.add(p6);
 
-      List<Person> stream = people
-              .stream()
-              .filter(x -> (x.getFirstName() != null && x.getLastName() != null && x.getAddress() != null))
-              .sorted()
-              .collect(Collectors.toList());
+        List<String> stream = people
+                .stream()
+                .filter(x -> (x.getFirstName() != null && x.getLastName() != null && x.getAddress() != null))
+                .sorted()
+                .map(Person::toString)
+                .collect(Collectors.toList());
 
         System.out.println(stream);
 
